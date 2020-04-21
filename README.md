@@ -2,16 +2,17 @@
  * @Description: 
  * @Date: 2020-04-21 10:31:49
  * @LastEditors: Astronautics across the sea of stars
- * @LastEditTime: 2020-04-21 15:18:14
+ * @LastEditTime: 2020-04-21 15:25:23
  -->
 # vue-parallax-image
 
 一个根据鼠标移动，图层视差效果vue组件
+未做测试，请谨慎使用！
 
  ## demo演示
- [demo](https://wei-zhe.github.io/#/threeBtn)
+ [demo](http://www.jq22.com/yanshi4800)
 
- ![dragScreenshot](./action.png) 
+
  ## 安装
  
  ```JS
