@@ -1,7 +1,12 @@
-# vue-3d-button
+<!--
+ * @Description: 
+ * @Date: 2020-04-21 10:31:49
+ * @LastEditors: Astronautics across the sea of stars
+ * @LastEditTime: 2020-04-21 15:18:14
+ -->
+# vue-parallax-image
 
-A Vue component to 3d-button
-一些3d已经特殊效果的按钮
+一个根据鼠标移动，图层视差效果vue组件
 
  ## demo演示
  [demo](https://wei-zhe.github.io/#/threeBtn)
@@ -10,53 +15,59 @@ A Vue component to 3d-button
  ## 安装
  
  ```JS
- npm install vue-3d-button
+ npm install vue-parallax-image --save
  ```
  
  ## 使用
  
  ```js
+    <ParallaxImage :config='config' />
 
-    import ButtonThree from 'vue-3d-button'
+    import ParallaxImage from 'vue-parallax-image'
     
-    Vue.use(ButtonThree)
+    components: { ParallaxImage },
 
-    <ButtonThree 
-                    type="haloBtn" 
-                    width="80px"
-                    height="80px" 
-                    bgColor='rgb(171, 2, 185)'
-                    round='100%'
-                    :autofocus='true'
-    >haloBtn</ButtonThree>
+    data () {
+           return {
+               config:{
+                    width:'100%', // 底图的宽度
+                    height: '500px', // 底图的高度
+                    basemap: require('../../assets/img/0.jpg'), // 底图相对路径
+                    imgList:[ // 视差图片的列表 （建议最少1张最多5张）
+                        {
+                            img: require('../../assets/img/1.png'), // 图片路径
+                            width:  '200px', // 图片的宽度
+                            height: '200px', // 图片的高度
+                            left:   '60%', // 图片的位置 - left
+                            top:    '25%'  // 图片的位置 - top
+                        },
+                        {
+                            img: require('../../assets/img/2.png'),
+                            width:  '200px',
+                            height: '100px',
+                            left:'40%',
+                            top: '45%'
+                        },
+                        {
+                            img: require('../../assets/img/3.png'),
+                            width:  '100%',
+                            height: '100%',
+                            left:'0%',
+                            top: '0%'
+                        },
+                        {
+                            img: require('../../assets/img/4.png'),
+                            width:  '',
+                            height: '',
+                            left:'5%',
+                            top: '0%'
+                        }
+                    ]
+                }
+           }
+       }
+
+       
 
  ```
-### type（String）
-按钮的样式 colorful / threeBtn / haloBtn
 
-### width， height（String）
-可自定义宽高，默认：auto
-
-### round （String）
-可以自定义圆角，默认：2em
-
-### nativeType（String）
-原生type属性  button / submit / reset
-
-### bgColor（String）
-背景颜色 默认：'rgba(247, 35, 89, 1)' 在colorful类型下暂且只支持 rgba，其他情况支持background的所有属性
-
-### fontColor（String）
-文字颜色 '#fff'
-
-### fontSize（String）
-文字大小，默认：'1em'
-
-### threeTit（String）
-3d按钮文案
-
-### colorful（String）
-colorful按钮的hover色 默认：'#4405f7'
-
-### autofocus（Boolean）
-是否默认聚焦
