@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2020-04-21 10:31:49
  * @LastEditors: Astronautics across the sea of stars
- * @LastEditTime: 2020-04-21 15:29:59
+ * @LastEditTime: 2020-04-21 15:35:58
  -->
 # vue-parallax-image
 
@@ -13,6 +13,8 @@
  ## demo演示
  [demo](http://www.jq22.com/yanshi4800)
 
+ ## github
+ [github](https://github.com/joe1900/vue-parallax-image)
 
  ## 安装
  
