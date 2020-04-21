@@ -1,6 +1,6 @@
 {
   "name": "vue-parallax-image",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "这是一个根据鼠标移动，图层相对位移产生视觉效果。（This is a vue component based on mouse movement and parallax.）",
   "main": "dist/parallax.min.js",
   "scripts": {
@@ -9,7 +9,10 @@
 		"build": "webpack --display-error-details --config webpack.config.js"
 	},
   "keywords": [
-    "vue"
+	"vue",
+	"鼠标",
+	"视差",
+	"3d"
   ],
   "author": "JiYingHao",
   "license": "ISC",
